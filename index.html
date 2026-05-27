@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar System — Procedural 3D Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADER OVERLAY
+       Ditampilkan saat tekstur prosedural sedang dibuat
+  ════════════════════════════════════════════════ -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-inner">
+      <div class="loader-orb"></div>
+      <p class="loader-title">SOLAR SYSTEM</p>
+      <p class="loader-sub">Generating Procedural Textures...</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-pct" id="loaderPct">0%</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       UI OVERLAY — Panel Info Planet
+  ════════════════════════════════════════════════ -->
+  <div id="ui-overlay">
+    <div id="planet-info" class="planet-card hidden">
+      <h2 id="planet-name">—</h2>
+      <div id="planet-stats"></div>
+    </div>
+    <div id="controls-hint">
+      <span>🖱 Drag to orbit</span>
+      <span>⚲ Scroll to zoom</span>
+      <span>Click planet for info</span>
+    </div>
+    <div id="title-badge">☀ SOLAR EXPLORER</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       THREE.JS CDN
+  ════════════════════════════════════════════════ -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
